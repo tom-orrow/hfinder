@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title hFinder
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = javascript_include_tag "https://maps.googleapis.com/maps/api/js?v=3.exp"
+    = csrf_meta_tags
+  body
+    .flash-messages
+      - flash.each do |type, message|
+        div class="alert #{alert_class_for(type)} alert-dismissable fade in"
+          button type="button" class="close" data-dismiss="alert" aria-hidden="true" ×
+          = message
+    = yield

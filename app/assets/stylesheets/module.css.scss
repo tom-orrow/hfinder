@@ -1,0 +1,30 @@
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+#locations {
+  position: fixed;
+  top: 50px;
+  bottom: 50px;
+  right: 50px;
+  width: 500px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+
+  .table-scroll-wrapper {
+    overflow-y: scroll;
+    height: calc(100% - 40px);
+  }
+
+  table {
+    width: 100%;
+
+    th, td { padding: 10px; }
+    th:first-child, td:first-child { width : 70%; }
+    td:hover { cursor: pointer; }
+    &.fixed-header { width: calc(100% - 15px); }
+  }
+}
+
+

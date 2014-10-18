@@ -1,0 +1,15 @@
+development: &defaults
+  adapter:  postgresql
+  host:     localhost
+  username: postgres
+  password: pwd
+  database: hfinder_dev
+  encoding: utf8
+
+test:
+  <<: *defaults
+  database: hfinder_test
+
+production:
+  <<: *defaults
+  database: hfinder
